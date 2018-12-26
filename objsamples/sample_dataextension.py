@@ -70,8 +70,8 @@ try:
     print('>>> Retrieve all columns for data extension ')
     myDEColumn = ET_Client.ET_DataExtension_Column()
     myDEColumn.auth_stub = stubObj
-    myDEColumn.props = ["Name"]
-    myDEColumn.search_filter = {'Property' : 'CustomerKey','SimpleOperator' : 'equals','Value' : NameOfDE}
+    myDEColumn.props = ["Name"] 
+    myDEColumn.search_filter = {'Property' : 'DataExtension.CustomerKey','SimpleOperator' : 'equals','Value' : NameOfDE}
     getResponse = myDEColumn.get()
     print('Retrieve Status: ' + str(getResponse.status))
     print('Code: ' + str(getResponse.code))
